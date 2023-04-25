@@ -9,3 +9,10 @@ The goal is to eliminate all the blocks on the screen.
 Every time ball hit block, the block disappeared.
 The control in the balls achieved by moving the paddle in the bootom of the screen by the keyboards left and right arrows.
 To pause the game use `p`. To continue, use `SPACE`.
+
+# levels
+There are 4 levels in this game:
+Level 1:
+![image](https://user-images.githubusercontent.com/118112616/234208597-279d6995-e450-4754-aa4f-e1476cc85f9b.png)
+
+Level 2:
