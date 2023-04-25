@@ -22,9 +22,13 @@ Level 3: <br>
 Level 4: <br>
 ![level 4](https://user-images.githubusercontent.com/118112616/234211778-272fdba6-b2ba-469e-bf36-fac4322c6700.png)
 
-# run
+# run <br>
 First, clone the repo. Than use the following commands inside the project folder: <br>
-To run this game from level 1 to 4 use the command ant run. <br>
-To run in any other levels order use the command ant run -Dargs="levels order". <br> For example, to start the game in level 2 and after win it move to level 4 write ant run -Dargs="2 4". <br>
-To clean all the compilation files use ant clean. <br>
-To compile the game without run it use ant compile. <br>
+To run this game from level 1 to 4 use the command `ant run`. <br>
+To run in any other levels order use the command `ant run -Dargs="levels order"`. <br> For example, to start the game in level 2 and after win it move to level 4 write `ant run -Dargs="2 4"`. <br>
+To clean all the compilation files use `ant clean`. <br>
+To compile the game without run it use `ant compile`. <br>
+
+# Requirements
+- Java
+- Ant
