@@ -16,11 +16,9 @@ Level 1: <br>
 ![level 1](https://user-images.githubusercontent.com/118112616/234551408-bedddbee-17f1-4cc3-a57f-1506036016d6.png) <br>
 
 Level 2: <br>
-![level 2](https://user-images.githubusercontent.com/118112616/234553257-dd23a818-4c8f-438a-8767-f21dd6f08afc.png)
- <br>
+![level 2](https://user-images.githubusercontent.com/118112616/234553257-dd23a818-4c8f-438a-8767-f21dd6f08afc.png) <br>
 Level 3: <br>
-![level 3](https://user-images.githubusercontent.com/118112616/234553837-75a93858-a557-410c-8528-9837ee35cd20.png)
- <br>
+![level 3](https://user-images.githubusercontent.com/118112616/234554271-5051f978-98e0-4b45-a128-327cdb23f624.png) <br>
 Level 4: <br>
 ![image](https://user-images.githubusercontent.com/118112616/234214911-c4a8d024-b9e5-4ff1-9aa9-4660781fc009.png) {: width="100%"} <br>
 
