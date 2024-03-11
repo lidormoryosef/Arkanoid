@@ -46,13 +46,11 @@ public class GameFlow {
         ScoreTrackingListener scoreTrackingListener = new ScoreTrackingListener(this.counterScore);
         ScoreIndicator scoreIndicator = new ScoreIndicator(scoreTrackingListener);
         for (int i = 0; i < levels.size(); i++) {
-            boolean firstTime = true;
-            this.ar.setCounterBlock(new Counter(levels.get(i).numberOfBlocksToRemove()));
             this.ar.setCounterBall(new Counter(levels.get(i).numberOfBalls()));
             scoreIndicator.setName(levels.get(i).levelName());
             scoreIndicator.setLive(counterLives.getValue());
             GameLevel level = new GameLevel(levels.get(i), this.ks, this.ar, scoreIndicator,
-                    scoreTrackingListener, this.counterLives, this.counterScore);
+                    scoreTrackingListener, this.counterLives);
             level.setGui(this.gui);
             level.setSum(this.sum);
             level.initialize();
@@ -61,22 +59,13 @@ public class GameFlow {
                     level.run();
                     if (this.ar.getCounterBall().getValue() == 0) {
                         counterLives.decrease(1);
-                        if (firstTime) {
-                            level.getSprites().getListSprite().remove(1);
-                            level.getEnvironment().getListCollidable().remove(0);
-                            firstTime = false;
-                        } else {
-                            level.getSprites().getListSprite().remove(level.getSprites().getListSprite().size() - 1);
-                            level.getEnvironment().getListCollidable().
-                                    remove(level.getEnvironment().getListCollidable().size() - 1);
-                        }
+                        level.getSprites().getListSprite().remove(level.getSprites().getListSprite().size() - 1);
+                        level.getEnvironment().getListCollidable().
+                                remove(level.getEnvironment().getListCollidable().size() - 1);
                         scoreIndicator.setLive(counterLives.getValue());
                         level.createBalls();
                         level.createPaddle();
-                        level.setSprites(level.getSprites());
-                        level.setEnvironment(level.getEnvironment());
                         this.ar.setCounterBall(new Counter(levels.get(i).numberOfBalls()));
-                        level.run();
                     }
                     if (this.ar.getCounterBlock().getValue() == 0) {
                         this.counterScore.increase(100);
@@ -84,7 +73,6 @@ public class GameFlow {
                     }
                 }
             }
-            firstTime = true;
         }
 
     }

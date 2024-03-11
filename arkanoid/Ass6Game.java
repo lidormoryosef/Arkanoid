@@ -1,12 +1,7 @@
 
 import biuoop.GUI;
 import biuoop.KeyboardSensor;
-import levels.GameFlow;
-import levels.Level1;
-import levels.Level2;
-import levels.Level3;
-import levels.Level4;
-import levels.LevelInformation;
+import levels.*;
 import sprites.Counter;
 import animation.AnimationRunner;
 
@@ -56,6 +51,7 @@ public class Ass6Game {
             }
         }
         if (levels.size() == 0) {
+            //levels.add(new Level5());
             levels.add(new Level1());
             levels.add(new Level2());
             levels.add(new Level3());

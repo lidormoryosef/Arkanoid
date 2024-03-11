@@ -68,7 +68,7 @@ public class GameLevel implements Animation {
      */
     public GameLevel(LevelInformation information, KeyboardSensor keyboard, AnimationRunner runner,
                      ScoreIndicator scoreIndicator, ScoreTrackingListener scoreTrackingListener,
-                     Counter counterLives, Counter counterScore) {
+                     Counter counterLives) {
         this.running = true;
         this.information = information;
         this.counterBall = new Counter();
@@ -82,7 +82,7 @@ public class GameLevel implements Animation {
         this.scoreIndicator = scoreIndicator;
         this.scoreTrackingListener = scoreTrackingListener;
         this.counterLives = counterLives;
-        this.counterScore = counterScore;
+        this.counterScore = scoreTrackingListener.getCurrentScore();
     }
 
     /**
@@ -182,7 +182,6 @@ public class GameLevel implements Animation {
      */
     public void initialize() {
         this.sprites.addSprite(information.getBackground());
-        createPaddle();
         limits();
         List<Block> blocks = information.blocks();
         BlockRemover blockRemover = new BlockRemover(this, this.counterBlock);
@@ -194,6 +193,7 @@ public class GameLevel implements Animation {
             this.counterBlock.increase(1);
         }
         createBalls();
+        createPaddle();
     }
 
     /**
