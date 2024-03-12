@@ -54,8 +54,7 @@ public class GameFlow {
             level.setGui(this.gui);
             level.setSum(this.sum);
             level.initialize();
-            while (this.ar.getCounterBall().getValue() != 0 && this.ar.getCounterBlock().getValue() != 0) {
-                while (this.counterLives.getValue() > 0) {
+            while (this.ar.getCounterBall().getValue() != 0 && this.ar.getCounterBlock().getValue() != 0 && this.counterLives.getValue() > 0) {
                     level.run();
                     if (this.ar.getCounterBall().getValue() == 0) {
                         counterLives.decrease(1);
@@ -71,7 +70,6 @@ public class GameFlow {
                         this.counterScore.increase(100);
                         break;
                     }
-                }
             }
         }
 
